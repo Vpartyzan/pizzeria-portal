@@ -114,7 +114,7 @@ class Cart {
       subTotalPrice: thisCart.subTotalPrice,
       totalNumber: thisCart.totalNumber,
       deliveryFee: settings.cart.defaultDeliveryFee,
-      products: []        
+      products: [],        
     };
 
     for(let prod of thisCart.products) {
@@ -126,7 +126,7 @@ class Cart {
       headers: {
         'Content-Type': 'application/json',
       }, 
-      body: JSON.stringify(payload) 
+      body: JSON.stringify(payload), 
     };
 
     fetch(url, options);

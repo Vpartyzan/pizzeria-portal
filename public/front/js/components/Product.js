@@ -211,7 +211,7 @@ class Product {
 
       params[paramId] = {
         label: param.label,
-        options: {}
+        options: {},
       };
 
       for(let optionId in param.options) {

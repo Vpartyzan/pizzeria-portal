@@ -25,16 +25,16 @@ class Booking {
     const params = {
       booking: [
         startDateParam,
-        endDateParam
+        endDateParam,
       ],
       eventsCurrent: [
         settings.db.notRepeatParam,
         startDateParam,
-        endDateParam
+        endDateParam,
       ],
       eventsRepeat: [
         settings.db.repeatParam,
-        endDateParam
+        endDateParam,
       ],
     };
 
@@ -53,7 +53,7 @@ class Booking {
     Promise.all([
       fetch(urls.booking),
       fetch(urls.eventsCurrent),
-      fetch(urls.eventsRepeat)
+      fetch(urls.eventsRepeat),
     ])
       .then(function(allResponses) {
         const bookingsResponse = allResponses[0];
@@ -259,7 +259,7 @@ class Booking {
       ppl: parseInt(thisBooking.peopleAmountWidget.correctValue),
       starters: [],
       phone: thisBooking.dom.phone.value,
-      address: thisBooking.dom.address.value
+      address: thisBooking.dom.address.value,
     };
 
     for(let starter of thisBooking.starters) {
@@ -271,7 +271,7 @@ class Booking {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
     };
 
     fetch(url, options);
