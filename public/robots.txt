@@ -1,0 +1,1 @@
+-e "# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow: /" 
