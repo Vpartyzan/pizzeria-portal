@@ -107,8 +107,8 @@ const Tables = () => {
               </TableCell>
               <TableCell>
                 {setForTable(demoContent.map( order => {
-                  return (order.hour == row.time) 
-                    ? (order.table == '1')                   
+                  return (order.hour === row.time) 
+                    ? (order.table === '1')                   
                       ? setStatus(order) 
                       : 'open for booking'
                     : null;
@@ -116,8 +116,8 @@ const Tables = () => {
               </TableCell>
               <TableCell>
                 {setForTable(demoContent.map( order => {
-                  return (order.hour == row.time) 
-                    ? (order.table == '2')                   
+                  return (order.hour === row.time) 
+                    ? (order.table === '2')                   
                       ? setStatus(order) 
                       : 'open for booking'
                     : null;
@@ -125,8 +125,8 @@ const Tables = () => {
               </TableCell>
               <TableCell>
                 {setForTable(demoContent.map( order => {
-                  return (order.hour == row.time) 
-                    ? (order.table == '3')                   
+                  return (order.hour === row.time) 
+                    ? (order.table === '3')                   
                       ? setStatus(order) 
                       : 'open for booking'
                     : null;
