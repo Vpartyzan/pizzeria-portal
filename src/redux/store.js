@@ -3,9 +3,21 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import tablesReducer from './tablesRedux';
+import homeReducer from './homeRedux';
 
 // define initial state and shallow-merge initial data
 const initialState = {
+  allOrders: {
+    data: {
+      order: [],
+      event: [],
+      booking: [],
+    },    
+    loading: {
+      active: false,
+      error: false,
+    },    
+  },
   tables: {
     data: [],
     loading: {
@@ -17,6 +29,7 @@ const initialState = {
 
 // define reducers
 const reducers = {
+  allOrders: homeReducer,
   tables: tablesReducer,
 };
 

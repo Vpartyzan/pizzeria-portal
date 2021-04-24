@@ -7,7 +7,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
 import MainLayout from './components/layout/MainLayout/MainLayout';
-import Homepage from './components/views/Homepage/Homepage';
+import Homepage from './components/views/Homepage/HomepageContainer';
 import Login from './components/views/Login/Login';
 import Tables from './components/views/Tables/Tables';
 import Booking from './components/views/Tables/Booking/Booking';
